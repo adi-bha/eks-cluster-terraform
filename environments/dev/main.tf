@@ -22,10 +22,10 @@ module "eks_node_group" {
 module "irsa_example" {
   source = "../../modules/irsa"
 
-  role_name             = "${var.cluster_name}-example-role"
-  oidc_provider_arn      = module.eks_cluster.oidc_provider_arn
-  oidc_provider_url      = module.eks_cluster.oidc_provider_url
-  namespace              = "default"
-  service_account_name   = "example-sa"
-  policy_arns            = []
+  role_name            = "${var.cluster_name}-example-role"
+  oidc_provider_arn    = module.eks_cluster.oidc_provider_arn
+  oidc_provider_url    = module.eks_cluster.oidc_provider_url
+  namespace            = "default"
+  service_account_name = "example-sa"
+  policy_arns          = []
 }
